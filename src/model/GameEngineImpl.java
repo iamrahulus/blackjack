@@ -1,7 +1,10 @@
 package model;
 
+import java.util.ArrayDeque;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Deque;
+import java.util.Random;
 
 import view.interfaces.GameEngineCallback;
 import model.interfaces.GameEngine;
@@ -99,7 +102,14 @@ public class GameEngineImpl implements GameEngine {
 	@Override
 	public Deque<PlayingCard> getShuffledDeck() {
 		// TODO Auto-generated method stub
+		Deque<PlayingCard> dq = new ArrayDeque<PlayingCard>();
+
 		return null;
 	}
 
+	private PlayingCard constructPlayingCard() {
+		Random random = new Random();
+		int random.nextInt(53) + 1;
+		
+	}
 }
