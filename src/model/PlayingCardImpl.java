@@ -1,12 +1,8 @@
 package model;
 
-import java.util.Random;
-
 import model.interfaces.PlayingCard;
 
 public class PlayingCardImpl implements PlayingCard {
-
-	private static Random random = new Random();
 
 	private PlayingCard.Value value;
 
@@ -19,19 +15,16 @@ public class PlayingCardImpl implements PlayingCard {
 
 	@Override
 	public Suit getSuit() {
-		// TODO Auto-generated method stub
 		return this.suit;
 	}
 
 	@Override
 	public Value getValue() {
-		// TODO Auto-generated method stub
 		return this.value;
 	}
 
 	@Override
 	public int getScore() {
-		// TODO Auto-generated method stub
 		if (this.getValue() == Value.ACE)
 			return 1;
 		if (this.getValue() == Value.EIGHT)
@@ -59,7 +52,6 @@ public class PlayingCardImpl implements PlayingCard {
 
 	@Override
 	public boolean equals(PlayingCard card) {
-		// TODO Auto-generated method stub
 		if (card.getSuit() == this.getSuit()
 				&& card.getScore() == this.getScore())
 			return true;
